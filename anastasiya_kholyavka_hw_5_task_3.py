@@ -14,34 +14,15 @@ random strings(words) that combine characters
 Tips: Use random module to get random char from string)
 
 '''
-'''
 import random
 
-word = input('Please, type a word: ')
+word = input('Print a word: ')
 
-# спроба 1
+new_word = random.choices(word, k = 5)
 
-print(random.choices(word)) # Треба, щоб це повторилося 5 разів, без дублювання прінт
-print(random.choices(word)) 
-print(random.choices(word)) 
-print(random.choices(word)) 
-print(random.choices(word)) 
+i = 0
+while i < 5:
+    print(''.join(new_word)) 
+    i = i + 1
 
-print(random.shuffle(list(word))) # Як зробити з кожної літери окремий елемент списку, а не рядка, щоб перемішати їх?
-'''
-
-# спроба 2
-
-import random
-
-word = input('Please, type a word: ')
-
-random_letter_1, random_letter_2, random_letter_3, random_letter_4, random_letter_5 = (random.choices(word)), (random.choices(word)), (random.choices(word)), (random.choices(word)), (random.choices(word))
-
-
-new_list = [random_letter_1, random_letter_2, random_letter_3, random_letter_4, random_letter_5]
-
-print(new_list)
-print(random.shuffle(new_list)) # Це не працює 
-
-
+# Всі нові констукції однакові
